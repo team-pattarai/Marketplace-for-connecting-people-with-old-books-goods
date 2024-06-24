@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ReUseBarter - Customer Signin</title>
+    <style>
+        /* Your CSS styles here */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: url('background.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            color: #2e7d32;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        
+        .container {
+            max-width: 400px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white */
+            border: 1px solid #a5d6a7;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 2s ease-in-out;
+            transition: all 0.3s ease;
+        }
+
+        .container:hover {
+            transform: scale(1.02);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        
+        h1 {
+            font-size: 26px;
+            margin-bottom: 20px;
+            color: #1b5e20; /* Dark green for the header */
+            text-align: center;
+            animation: fadeIn 2.5s ease-in-out;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+            animation: fadeIn 3s ease-in-out;
+        }
+        
+        label {
+            font-weight: bold;
+            margin-bottom: 8px;
+            display: block;
+            color: #2e7d32; /* Matching the overall color scheme */
+            animation: fadeIn 3.5s ease-in-out;
+        }
+        
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            height: 40px;
+            margin-top: 8px;
+            padding: 10px;
+            border: 1px solid #a5d6a7;
+            border-radius: 8px;
+            box-sizing: border-box;
+            color: #1b5e20; /* Dark green for input text */
+            animation: fadeIn 4s ease-in-out;
+        }
+        
+        button[type="submit"] {
+            background-color: #388e3c;
+            color: #ffffff;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            display: block;
+            width: 100%;
+            margin-top: 20px;
+            animation: fadeIn 4.5s ease-in-out;
+        }
+        
+        button[type="submit"]:hover {
+            background-color: #2e7d32;
+            transform: scale(1.05);
+        }
+        
+        .form-group:last-child {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ReUseBarter - Customer Signin</h1>
+        <form id="customer-signin-form" action="signin_process.php" method="POST">
+            <div class="form-group">
+                <label for="customer-email">Email:</label>
+                <input type="text" id="customer-email" name="customer-email" required>
+            </div>
+            <div class="form-group">
+                <label for="customer-password">Password:</label>
+                <input type="password" id="customer-password" name="customer-password" required>
+            </div>
+            <button type="submit">Sign In</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReUseBarter Onboarding</title>
+    <style>
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #e8f5e9;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .btn-customer {
+            display: inline-block;
+            padding: 15px 25px;
+            margin: 10px;
+            border: none;
+            background-color: #81d084;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 25px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .btn-customer:hover {
+            background-color: #1e3620;
+            transform: scale(1.05);
+        }
+
+        .btn-merchant {
+            display: inline-block;
+            padding: 15px 25px;
+            margin: 10px;
+            border: none;
+            background-color: #008CBA;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 25px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .btn-merchant:hover {
+            background-color: #007B9E;
+            transform: scale(1.05);
+        }
+
+        /* Rest of the CSS styles remain unchanged */
+        header {
+            width: 100%;
+            padding: 20px 0;
+            background-color: #3a8d40;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            margin-left: 20px;
+        }
+
+        .logo img {
+            width: 80px;
+        }
+
+        .logo h1 {
+            margin: 0 0 0 10px;
+            color: #fff;
+        }
+
+        nav {
+            margin-right: 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #a5d6a7;
+        }
+
+        .hero {
+            background-color: #3f8642;
+            color: #fff;
+            padding: 60px 20px;
+            width: 100%;
+            box-sizing: border-box;
+            animation: fadeIn 2.5s ease-in-out;
+        }
+
+        .hero h2 {
+            margin: 10px 0;
+            font-size: 36px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .carousel {
+            position: relative;
+            width: 80%;
+            max-width: 800px;
+            overflow: hidden;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        .carousel-inner {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-inner img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .description {
+            background-color: #fff;
+            padding: 40px 20px;
+            margin: 20px auto;
+            width: 80%;
+            max-width: 800px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            animation: fadeIn 3.5s ease-in-out;
+        }
+
+        .description h2 {
+            color: #2e7d32;
+            margin-bottom: 20px;
+        }
+
+        .description p, .description ul {
+            font-size: 16px;
+            color: #555;
+        }
+
+        .description ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .description ul li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .description ul li::before {
+            content: "✔";
+            position: absolute;
+            left: 0;
+            color: #4caf50;
+        }
+
+        .question {
+            margin: 40px auto;
+            width: 80%;
+            max-width: 800px;
+            animation: fadeIn 4s ease-in-out;
+        }
+
+        .question h2 {
+            margin-bottom: 20px;
+            color: #1b5e20;
+        }
+
+        .btn {
+            display: block;
+            width: 80%;
+            max-width: 300px;
+            padding: 15px;
+            margin: 10px auto;
+            border: none;
+            background-color: #388e3c;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #2e7d32;
+            transform: scale(1.05);
+        }
+
+        .btn:focus {
+            outline: none;
+        }
+
+        footer {
+            width: 100%;
+            background-color: #388e3c;
+            color: #fff;
+            padding: 20px 0;
+            animation: fadeIn 4.5s ease-in-out;
+        }
+
+        footer ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        footer ul li {
+            margin: 0 15px;
+        }
+
+        footer ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        footer ul li a:hover {
+            color: #a5d6a7;
+        }
+
+        footer h2 {
+            margin-bottom: 10px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="REUSE.png" alt="ReUseBarter Logo">
+            <h1>ReUseBarter</h1>
+        </div>
+        <nav>
+            <ul> 
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="hero">
+        <h2>Welcome to ReUseBarter!</h2>
+        <p>Join our community to trade, barter, and reuse items within your community.</p>
+        <button class="btn" id="signup-btn">Sign Up Now</button>
+    </div>
+    <section class="carousel">
+        <h2>Explore Our Community</h2>
+        <div class="carousel-inner">
+            <img src="background.jpeg" alt="Pic 1">
+            <img src="background2.jpeg" alt="Pic 2">
+            <img src="background3.jpeg" alt="Pic 3">
+            <img src="background.jpeg" alt="Pic 4">
+            <img src="background2.jpeg" alt="Pic 5">
+        </div>
+    </section>
+    <section class="description">
+        <h2>What is ReUseBarter?</h2>
+        <p>ReUseBarter is an innovative platform where you can trade, barter, and reuse items within your community, promoting sustainability and reducing waste.</p>
+        <ul>
+            <li>Browse items from local sellers</li>
+            <li>Trade, barter, or reuse items</li>
+            <li>Connect with your community</li>
+        </ul>
+        <button class="btn">Learn More</button>
+    </section>
+    <section class="question">
+        <h2>Who are you?</h2>
+        <button class="btn-customer" id="customer-btn"><a href="Customer.html">Customer</a></button>
+        <button class="btn-merchant" id="merchant-btn"><a href="Merchant.html">Merchant</a></button>
+    </section>
+    <footer>
+        <h2>Get in Touch</h2>
+        <p>&copy; 2023 ReUseBarter</p>
+        <ul>
+            
+            <li><a href="#">About</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </footer>
+    <script>
+        let currentIndex = 0;
+
+        const carouselInner = document.querySelector('.carousel-inner');
+        const images = carouselInner.querySelectorAll('img');
+        const totalImages = images.length;
+
+        function showNextImage() {
+            currentIndex = (currentIndex + 1) % totalImages;
+            carouselInner.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+
+        setInterval(showNextImage, 3000);
+
+        document.getElementById('signup-btn').addEventListener('click', function() {
+            document.querySelector('.description').scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>
